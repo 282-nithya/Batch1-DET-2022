@@ -15,6 +15,12 @@ namespace Batch1_DET_2022
         double sal;
         DateOnly doj;
 
+        public static int Empno { get; internal set; }
+        public static string Ename { get; internal set; }
+        public static int ESal { get; internal set; }
+        public static int Deptno { get; internal set; }
+        public static string EJob { get; internal set; }
+
         //constructor - is a function used to init object data
         //has the same name as classname, no ret type
         public Employe(int id, string name, DateOnly doj)
