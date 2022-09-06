@@ -26,7 +26,7 @@ namespace Batch1_DET_2022
             //AddNewEmployee();
             // UpdateNewEmployee1();
             //storedprocedurewithout();
-            CallStoredProcwithSQLParamater_insert();
+            // CallStoredProcwithSQLParamater_insert();
             //storedprocedureupdate();
 
             Console.ReadLine();
@@ -150,63 +150,73 @@ namespace Batch1_DET_2022
         //}
 
 
-        private static void CallStoredProcwithSQLParamater_insert()
-        {
-            var ctx = new traningtsqlContext();
-            var param = new SqlParameter[] {
-               new SqlParameter() {
-                     ParameterName = "@empno",
-                 SqlDbType = System.Data.SqlDbType.Int,
-                       Size = 100,
-                       Direction = System.Data.
-                ParameterDirection.Input,
-                       Value = 2456
-                },
+        //    private static void CallStoredProcwithSQLParamater_insert()
+        //    {
+        //        var ctx = new traningtsqlContext();
+        //        var param = new SqlParameter[] {
+        //           new SqlParameter() {
+        //                 ParameterName = "@empno",
+        //             SqlDbType = System.Data.SqlDbType.Int,
+        //                   Size = 100,
+        //                   Direction = System.Data.
+        //            ParameterDirection.Input,
+        //                   Value = 2456
+        //            },
 
-              new SqlParameter() {
-                 ParameterName = "@ename",
-                SqlDbType = System.Data.
-                    SqlDbType.VarChar,
-                      Size = 100,
-                   Direction = System.Data.
-                    ParameterDirection.Input,
-                     Value = "richa"},
-
-
-           new SqlParameter() {
-            ParameterName = "@Job",
-            SqlDbType = System.Data.
-            SqlDbType.VarChar,
-            Size = 100,
-           Direction = System.Data.
-          ParameterDirection.Input,
-             Value = "Trainer"}
+        //          new SqlParameter() {
+        //             ParameterName = "@ename",
+        //            SqlDbType = System.Data.
+        //                SqlDbType.VarChar,
+        //                  Size = 100,
+        //               Direction = System.Data.
+        //                ParameterDirection.Input,
+        //                 Value = "richa"},
 
 
-          };
+        //       new SqlParameter() {
+        //        ParameterName = "@sal",
+        //        SqlDbType = System.Data.
+        //          SqlDbType.Decimal,
+        //        Size = 100,
+        //       Direction = System.Data.
+        //      ParameterDirection.Input,
+        //         Value = "1000"},
+
+        //        new SqlParameter() {
+        //        ParameterName = "@DEPTNO",
+        //        SqlDbType = System.Data.
+        //        SqlDbType.Decimal,
+        //        Size = 100,
+        //       Direction = System.Data.
+        //      ParameterDirection.Input,
+        //         Value = "656"}
 
 
-            try
-            {
-                var result = ctx.Database.ExecuteSqlRaw("Insertdetailss @empno, @ename, @Job", param);
-                Console.WriteLine("added");
-            }
-            catch (Exception ex)
-            {
+        //      };
 
 
-                throw;
-            }
-
-            Console.WriteLine("update successful");
-
-
-        }
-
-
+        //        try
+        //        {
+        //            var result = ctx.Database.ExecuteSqlRaw("addemployee12 @empno, @ename, @sal,@DEPTNO", param);
+        //            Console.WriteLine("added");
+        //        }
+        //        catch (Exception ex)
+        //        {
 
 
+        //            throw;
+        //        }
+
+        //        Console.WriteLine("update successful");
+
+
+        //    }
+
+
+
+
+
+        //}
 
     }
-
 }
